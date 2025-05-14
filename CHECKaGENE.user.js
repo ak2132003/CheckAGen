@@ -22,7 +22,7 @@
 (function() {
     'use strict';
     // رابط ملف التحكم عن بُعد
-    const controlURL = 'https://raw.githubusercontent.com/ak2132003/Card_Opener/main/control.json';
+    const controlURL = 'https://raw.githubusercontent.com/ak2132003/allowconf/refs/heads/main/scriptStatus.json';
 
     try {
         // جلب إعدادات التحكم من ملف JSON
