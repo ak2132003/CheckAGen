@@ -19,8 +19,9 @@
 // @resource     NOTIFICATION_SOUND https://files.catbox.moe/hb2et0.mp3
 // ==/UserScript==
 
-(function() {
+(async function () {
     'use strict';
+
     // رابط ملف التحكم عن بُعد
     const controlURL = 'https://raw.githubusercontent.com/ak2132003/allowconf/refs/heads/main/scriptStatus.json';
 
@@ -37,7 +38,6 @@
     } catch (error) {
         console.error('فشل في جلب إعدادات التحكم:', error);
     }
-
     // Configuration
     const config = {
         sessionDuration: 24 * 60 * 60, // 24 hours in seconds
