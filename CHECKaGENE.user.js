@@ -21,6 +21,22 @@
 
 (function() {
     'use strict';
+    // رابط ملف التحكم عن بُعد
+    const controlURL = 'https://raw.githubusercontent.com/ak2132003/Card_Opener/main/control.json';
+
+    try {
+        // جلب إعدادات التحكم من ملف JSON
+        const response = await fetch(controlURL);
+        const controlData = await response.json();
+
+        // تحقق إذا كان السكربت معطلاً
+        if (!controlData.enabled) {
+            alert(controlData.message || 'تم تعطيل السكربت من قبل المطور.');
+            return; // إيقاف تنفيذ السكربت
+        }
+    } catch (error) {
+        console.error('فشل في جلب إعدادات التحكم:', error);
+    }
 
     // Configuration
     const config = {
